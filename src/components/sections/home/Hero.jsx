@@ -2,8 +2,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/images/ezgif.com-gif-maker.webp')] w-full min-h-screen">
-      <div className="flex flex-col items-center center py-32 text-white">
+    <div className="bg-[url('/images/ezgif.com-gif-maker.webp')] w-full h-full bg-no-repeat bg-cover">
+      <div className="flex flex-col justify-center items-center text-white py-36">
         <h2 className="text-4xl">
           You got the travel plans, we got the travel vans.
         </h2>
