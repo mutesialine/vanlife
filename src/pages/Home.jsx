@@ -1,10 +1,11 @@
-import React from "react";
 import NavBar from "../components/layouts/NavBar";
+import Hero from "../components/sections/home/Hero";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div>
       <NavBar />
+      <Hero />
     </div>
   );
 };
