@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import VanCard from "../../ui/VanCard";
 
 const Van = () => {
   const [vans, setVans] = useState([]);
@@ -9,14 +10,9 @@ const Van = () => {
   }, []);
 
   return (
-    <div>
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-16 px-24">
       {vans.map((element) => (
-        <div key={element.id}>
-          <img src={element.imageUrl} alt="element" />
-          <p>{element.name}</p>
-          <p>{element.price}</p>
-          <p>{element.type}</p>
-        </div>
+        <VanCard {...element} key={element.id} />
       ))}
     </div>
   );

@@ -6,7 +6,7 @@ import AboutVan from "./components/sections/van/AboutVan";
 import Van from "./components/sections/van/Van";
 const App = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#FFF7ED]">
       <BrowserRouter>
         <NavBar />
         <Routes>

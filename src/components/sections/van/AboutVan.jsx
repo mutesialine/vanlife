@@ -1,12 +1,12 @@
 const AboutVan = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col justify-center items-center py-16 gap-y-4">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-x-6 py-16 gap-y-4 px-12">
       <img
         src="/images/image 54.webp"
-        className="h-[400px] w-full object-cover"
+        className=" w-full object-cover"
         alt="our mission"
       />
-      <div className="px-12 space-y-6">
+      <div className="space-y-6">
         <h2 className="text-4xl font-bold">
           Don’t squeeze in a sedan when you could relax in a van.
         </h2>
@@ -17,7 +17,7 @@ const AboutVan = () => {
           team is full of vanlife enthusiasts who know firsthand the magic of
           touring the world on 4 wheels.
         </p>
-        <div className="bg-orange-400 space-y-4 py-6 px-6 w-1/2 mt-12">
+        <div className="bg-orange-400 space-y-4 py-6 px-6 w-1/2 md:w-[80%] mt-12">
           <p className="text-2xl font-bold">
             Your destination is waiting. Your van is ready.
           </p>
