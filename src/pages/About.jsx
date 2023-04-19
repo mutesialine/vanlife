@@ -1,4 +1,4 @@
-import AboutVan from "../components/sections/van/AboutVan";
+import AboutVan from "../components/sections/about/AboutVan";
 
 const Van = () => {
   return (

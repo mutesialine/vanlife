@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import VanCard from "../../ui/VanCard";
 
 const Van = () => {
@@ -10,9 +11,11 @@ const Van = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-16 px-24">
+    <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 py-16 px-24">
       {vans.map((element) => (
-        <VanCard {...element} key={element.id} />
+        <Link to={`/van/${element.id}`} className="hover:opacity-80">
+          <VanCard {...element} key={element.id} />
+        </Link>
       ))}
     </div>
   );
