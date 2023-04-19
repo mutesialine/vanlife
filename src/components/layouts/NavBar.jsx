@@ -11,7 +11,9 @@ const NavBar = () => {
         <Link to={"/about"} className="hover:underline">
           About
         </Link>
-        <Link>Vans</Link>
+        <Link to={"/van"} className="hover:underline">
+          Vans
+        </Link>
       </div>
     </div>
   );

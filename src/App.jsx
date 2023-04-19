@@ -1,18 +1,22 @@
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Van from "./pages/Van";
 import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
+import AboutVan from "./components/sections/van/AboutVan";
+import Van from "./components/sections/van/Van";
 const App = () => {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Van />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="min-h-screen">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutVan />} />
+          <Route path="/van" element={<Van />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 
