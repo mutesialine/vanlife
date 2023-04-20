@@ -1,7 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HostLayout, Layout } from "./components/layouts";
 import { Home, About, Van, VanDetail } from "./pages";
-import { Dashboard, HostVans, Income, Reviews } from "./pages/Host";
+import {
+  Dashboard,
+  HostVanDetail,
+  HostVans,
+  Income,
+  Reviews,
+} from "./pages/hostPage";
 
 const App = () => {
   return (
@@ -16,8 +22,9 @@ const App = () => {
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
-              <Route path="vans" element={<HostVans />} />
               <Route path="reviews" element={<Reviews />} />
+              <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVanDetail />} />
             </Route>
           </Route>
         </Routes>
