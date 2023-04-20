@@ -8,6 +8,9 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="flex gap-4 text-lg">
+        <Link to={"/host"} className="hover:underline">
+          Host
+        </Link>
         <Link to={"/about"} className="hover:underline">
           About
         </Link>
