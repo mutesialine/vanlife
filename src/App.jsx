@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/layouts/NavBar";
-import Home from "./pages/Home";
-import AboutVan from "./components/sections/about/AboutVan";
-import Van from "./components/sections/van/Van";
-import VanDetail from "./components/sections/van/VanDetail";
+import { Navbar, Footer } from "./components/layouts";
+import { Home, About, Van, VanDetail } from "./pages";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#FFF7ED]">
+    <div className="min-h-screen bg-[#FFF7ED] relative">
       <BrowserRouter>
-        <NavBar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutVan />} />
+          <Route path="/about" element={<About />} />
           <Route path="/van" element={<Van />} />
           <Route path="/van/:id" element={<VanDetail />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

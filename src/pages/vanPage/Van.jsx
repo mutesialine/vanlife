@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import VanCard from "../../ui/VanCard";
+import VanCard from "../../components/ui/VanCard";
 
 const Van = () => {
   const [vans, setVans] = useState([]);

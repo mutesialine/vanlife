@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import VanCard from "../../ui/VanCard";
 const VanDetail = () => {
   const params = useParams();
   const [van, setVan] = useState(null);

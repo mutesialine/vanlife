@@ -1,4 +1,4 @@
-const AboutVan = () => {
+const About = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-x-6 py-16 gap-y-4 px-12">
       <img
@@ -30,4 +30,4 @@ const AboutVan = () => {
   );
 };
 
-export default AboutVan;
+export default About;
