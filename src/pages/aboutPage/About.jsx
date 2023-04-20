@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-x-6 py-16 gap-y-4 px-12">
@@ -17,13 +19,16 @@ const About = () => {
           team is full of vanlife enthusiasts who know firsthand the magic of
           touring the world on 4 wheels.
         </p>
-        <div className="bg-orange-400 space-y-4 py-6 px-6 w-1/2 md:w-[80%] mt-12">
+        <div className="bg-orange-400 flex flex-col gap-4 py-4 px-6 mt-12">
           <p className="text-2xl font-bold">
             Your destination is waiting. Your van is ready.
           </p>
-          <button className="bg-black p-3 text-white rounded-md">
+          <Link
+            to={"/vans"}
+            className="bg-black p-3 w-fit  text-white rounded-md hover:opacity-80"
+          >
             Explore our Vans
-          </button>
+          </Link>
         </div>
       </div>
     </div>

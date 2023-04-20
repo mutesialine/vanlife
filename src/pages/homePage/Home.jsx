@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="h-screen">
@@ -10,9 +12,12 @@ const Home = () => {
             Add adventure to your life by joining the #vanlife movement. Rent
             the perfect van to make your perfect road trip.
           </p>
-          <button className="p-4 bg-orange-500 mt-14 md:w-1/2">
+          <Link
+            to={"/vans"}
+            className="p-4 bg-orange-500 text-center hover:opacity-80 mt-14 md:w-1/2"
+          >
             Find your van
-          </button>
+          </Link>
         </div>
       </div>
     </div>
