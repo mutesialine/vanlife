@@ -3,9 +3,10 @@ import { NavLink, Outlet } from "react-router-dom";
 const HostLayout = () => {
   return (
     <>
-      <nav className="flex gap-6 text-lg px-36 pt-6">
+      <nav className="flex gap-6 text-lg px-12 pt-6 max-w-7xl mx-auto">
         <NavLink
-          to={"host"}
+          to={"/host"}
+          end
           className={({ isActive }) =>
             isActive ? "text-red-600 font-bold underline" : null
           }
@@ -19,6 +20,14 @@ const HostLayout = () => {
           }
         >
           Income
+        </NavLink>
+        <NavLink
+          to={"vans"}
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
+          Vans
         </NavLink>
         <NavLink
           to={"reviews"}
