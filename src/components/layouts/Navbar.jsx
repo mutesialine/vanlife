@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="py-8 px-12 flex justify-between items-center max-w-7xl mx-auto">
@@ -8,15 +8,30 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="flex gap-4 text-lg">
-        <Link to={"/host"} className="hover:underline">
+        <NavLink
+          to={"/host"}
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
           Host
-        </Link>
-        <Link to={"/about"} className="hover:underline">
+        </NavLink>
+        <NavLink
+          to={"/about"}
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
           About
-        </Link>
-        <Link to={"/vans"} className="hover:underline">
+        </NavLink>
+        <NavLink
+          to={"/vans"}
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
           Vans
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
