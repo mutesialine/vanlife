@@ -1,13 +1,13 @@
 import { NavLink, Link } from "react-router-dom";
 const NavBar = () => {
   return (
-    <div className="py-8 px-12 flex justify-between items-center max-w-7xl mx-auto">
+    <div className="py-8 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
       <div className="text-2xl md:text-4xl font-bold">
         <Link to="/" className="hover:underline">
           #VANLIFE
         </Link>
       </div>
-      <div className="flex gapx-4 md:gap-x-8 text-lg font-semibold">
+      <div className="flex gap-x-4 md:gap-x-8 text-lg font-semibold">
         <NavLink
           to="host"
           className={({ isActive }) =>

@@ -9,7 +9,7 @@ const HostVans = () => {
       .then((data) => setVans(data.vans));
   }, []);
   return (
-    <div className="max-w-7xl mx-auto pt-6 pb-24 px-6 md:px-24 flex flex-col gap-4  ">
+    <div className="max-w-7xl mx-auto pt-16 pb-24 px-6 md:px-12 flex flex-col gap-4">
       <h2 className="text-4xl font-bold pb-4">Your listed Vans</h2>
       {vans.length > 0 ? (
         vans.map((van) => (
