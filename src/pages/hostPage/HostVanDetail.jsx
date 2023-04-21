@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Outlet, useParams } from "react-router";
-import { Link } from "react-router-dom";
-import { HostVanLayout } from "../../components/layouts";
+import { Link, NavLink } from "react-router-dom";
 
 const HostVanDetail = () => {
   const { id } = useParams();
@@ -33,7 +32,33 @@ const HostVanDetail = () => {
       ) : (
         <p>Loading</p>
       )}
-      <HostVanLayout />
+      <nav className="flex gap-6 text-lg px-12 pt-6 max-w-7xl mx-auto">
+        <NavLink
+          to="."
+          end
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
+          Details
+        </NavLink>
+        <NavLink
+          to="pricing"
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
+          pricing
+        </NavLink>
+        <NavLink
+          to="photos"
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : null
+          }
+        >
+          Photos
+        </NavLink>
+      </nav>
       <Outlet />
     </div>
   );

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const HostVanLayout = () => {
   return (
@@ -30,6 +30,7 @@ const HostVanLayout = () => {
           Photos
         </NavLink>
       </nav>
+      <Outlet />
     </>
   );
 };
