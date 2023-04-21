@@ -1,6 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const HostLayout = () => {
+const HostVanLayout = () => {
   return (
     <>
       <nav className="flex gap-6 text-lg px-12 pt-6 max-w-7xl mx-auto">
@@ -11,36 +11,27 @@ const HostLayout = () => {
             isActive ? "text-red-600 font-bold underline" : null
           }
         >
-          Dashboard
+          Details
         </NavLink>
         <NavLink
-          to="income"
+          to="pricing"
           className={({ isActive }) =>
             isActive ? "text-red-600 font-bold underline" : null
           }
         >
-          Income
+          pricing
         </NavLink>
         <NavLink
-          to="vans"
+          to="photos"
           className={({ isActive }) =>
             isActive ? "text-red-600 font-bold underline" : null
           }
         >
-          Vans
-        </NavLink>
-        <NavLink
-          to="reviews"
-          className={({ isActive }) =>
-            isActive ? "text-red-600 font-bold underline" : null
-          }
-        >
-          Reviews
+          Photos
         </NavLink>
       </nav>
-      <Outlet />
     </>
   );
 };
 
-export default HostLayout;
+export default HostVanLayout;

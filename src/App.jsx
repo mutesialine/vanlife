@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HostLayout, Layout } from "./components/layouts";
+import { HostLayout, HostVanLayout, Layout } from "./components/layouts";
 import { Home, About, Van, VanDetail } from "./pages";
 import {
   Dashboard,
   HostVanDetail,
+  HostVanInfo,
+  HostVanPhotos,
+  HostVanPricing,
   HostVans,
   Income,
   Reviews,
@@ -24,7 +27,11 @@ const App = () => {
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="vans" element={<HostVans />} />
-              <Route path="vans/:id" element={<HostVanDetail />} />
+              <Route pacth="vans/:id" element={<HostVanDetail />}>
+                <Route index element={<HostVanInfo />} />
+                <Route path="pricing" element={<HostVanPricing />} />
+                <Route path="photos" element={<HostVanPhotos />} />
+              </Route>
             </Route>
           </Route>
         </Routes>

@@ -24,7 +24,7 @@ const About = () => {
             Your destination is waiting. Your van is ready.
           </p>
           <Link
-            to={"/vans"}
+            to="/vans"
             className="bg-black p-3 w-fit  text-white rounded-md hover:opacity-80"
           >
             Explore our Vans

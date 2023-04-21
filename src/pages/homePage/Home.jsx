@@ -13,7 +13,7 @@ const Home = () => {
             the perfect van to make your perfect road trip.
           </p>
           <Link
-            to={"/vans"}
+            to="/vans"
             className="p-4 bg-orange-500 text-center hover:opacity-80 mt-14 md:w-1/2"
           >
             Find your van
