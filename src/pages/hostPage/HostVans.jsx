@@ -13,7 +13,11 @@ const HostVans = () => {
       <h2 className="text-4xl font-bold pb-4">Your listed Vans</h2>
       {vans.length > 0 ? (
         vans.map((van) => (
-          <Link to={`/host/vans/${van.id}`} key={van.id} className="">
+          <Link
+            to={`/host/vans/${van.id}`}
+            key={van.id}
+            className="hover:opacity-80"
+          >
             <div
               className="flex items-center gap-x-4 w-1/2 bg-white p-4"
               key={van.id}
