@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 const HostLayout = () => {
   return (
     <>
-      <nav className="flex gap-6 text-lg px-12 pt-6 max-w-7xl mx-auto">
+      <nav className="flex gap-x-4 md:gap-x-8 text-lg pt-6 px-6 max-w-7xl mx-auto">
         <NavLink
           to="."
           end

@@ -7,7 +7,7 @@ const NavBar = () => {
           #VANLIFE
         </Link>
       </div>
-      <div className="flex gap-4 text-lg font-semibold">
+      <div className="flex gapx-4 md:gap-x-8 text-lg font-semibold">
         <NavLink
           to="host"
           className={({ isActive }) =>

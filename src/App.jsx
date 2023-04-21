@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HostLayout, HostVanLayout, Layout } from "./components/layouts";
+import { HostLayout, Layout } from "./components/layouts";
 import { Home, About, Van, VanDetail } from "./pages";
 import {
   Dashboard,
@@ -10,7 +10,7 @@ import {
   HostVans,
   Income,
   Reviews,
-} from "./pages/hostPage";
+} from "./pages/Host";
 
 const App = () => {
   return (
