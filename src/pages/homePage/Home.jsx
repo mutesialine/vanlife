@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="h-screen">
       <div className="bg-[url('/images/ezgif.com-gif-maker.webp')] w-full h-full bg-no-repeat bg-cover ">
-        <div className="flex flex-col justify-center items-center text-white pt-56  px-8 mt-0 max-w-7xl mx-auto ">
+        <div className="flex flex-col justify-center items-center text-white pt-36 px-8 mt-0 max-w-7xl mx-auto ">
           <h2 className="text-4xl">
             You got the travel plans, we got the travel vans.
           </h2>
