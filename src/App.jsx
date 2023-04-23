@@ -14,7 +14,7 @@ import {
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#FFF7ED] relative">
+    <div className="min-h-screen bg-amber-50 relative">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
