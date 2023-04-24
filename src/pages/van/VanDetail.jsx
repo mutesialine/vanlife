@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 const VanDetail = () => {
-  const params = useParams();
+  const {id} = useParams();
   const [van, setVan] = useState(null);
   useEffect(() => {
-    fetch(`/api/vans/${params.id}`)
+    fetch(`/api/vans/${id}`)
       .then((res) => res.json())
-      .then((data) => setVan(data.vans));
-  }, [params.id]);
+      .then((data) => setVan(data.vans))
+      .catch((error) => console.log(error));
+  }, [id]);
   return (
-    <div className="max-w-7xl mx-auto gap-8 py-16 px-24">
+    <div className="max-w-7xl mx-auto gap-8 py-16 px-6 md:px-12">
       {van ? (
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-8">
           <img src={van.imageUrl} alt="element" className="w-[500px]" />

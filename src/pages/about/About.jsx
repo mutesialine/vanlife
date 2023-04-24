@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-x-6 py-16 gap-y-4 px-12">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-x-6 py-20 gap-y-4 px-6 md:px-12">
       <img
         src="/images/image 54.webp"
         className=" w-full object-cover"
@@ -24,7 +24,7 @@ const About = () => {
             Your destination is waiting. Your van is ready.
           </p>
           <Link
-            to={"/vans"}
+            to="/vans"
             className="bg-black p-3 w-fit  text-white rounded-md hover:opacity-80"
           >
             Explore our Vans
