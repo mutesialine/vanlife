@@ -15,7 +15,7 @@ const HostVans = () => {
       {vans.length > 0 ? (
         vans.map((van) => (
           <Link
-            to={id}
+            to={van.id}
             relative="path"
             key={van.id}
             className="hover:opacity-80"
