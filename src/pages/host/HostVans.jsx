@@ -6,7 +6,8 @@ const HostVans = () => {
   useEffect(() => {
     fetch("/api/host/vans")
       .then((res) => res.json())
-      .then((data) => setVans(data.vans));
+      .then((data) => setVans(data.vans))
+      .catch((error) => console.log(error));
   }, []);
   return (
     <div className="max-w-7xl mx-auto pt-16 pb-24 px-6 md:px-12 flex flex-col gap-4">
@@ -14,7 +15,8 @@ const HostVans = () => {
       {vans.length > 0 ? (
         vans.map((van) => (
           <Link
-            to={`/host/vans/${van.id}`}
+            to={id}
+            relative="path"
             key={van.id}
             className="hover:opacity-80"
           >

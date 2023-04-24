@@ -6,7 +6,8 @@ const Van = () => {
   useEffect(() => {
     fetch("api/vans")
       .then((res) => res.json())
-      .then((data) => setVans(data.vans));
+      .then((data) => setVans(data.vans))
+      .catch((error) => console.log(error));
   }, []);
 
   return (

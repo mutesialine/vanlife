@@ -5,7 +5,6 @@ import {
   About,
   Van,
   VanDetail,
-  Dashboard,
   Income,
   Reviews,
   HostVans,
@@ -13,6 +12,7 @@ import {
   HostVanInfo,
   HostVanPricing,
   HostVanPhotos,
+  Dashboard,
 } from "./pages";
 
 const App = () => {
