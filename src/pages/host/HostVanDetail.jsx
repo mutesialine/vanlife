@@ -13,7 +13,7 @@ const HostVanDetail = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto pt-12 pb-24 px-6 md:px-24 space-y-4 mt-6">
-        <Link to=".." relative="path" className="text-2xl text-center">
+        <Link to="/host/vans" relative="path" className="text-2xl text-center">
           &larr;{" "}
           <span className="text-lg hover:underline">Back to all vans</span>
         </Link>
