@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 const VanDetail = () => {
   const { id } = useParams();
+  const location = useLocation();
+  console.log(location);
   const [van, setVan] = useState(null);
   useEffect(() => {
     fetch(`/api/vans/${id}`)
@@ -9,9 +11,11 @@ const VanDetail = () => {
       .then((data) => setVan(data.vans))
       .catch((error) => console.log(error));
   }, [id]);
+
+  const search = location.state?.search || "null";
   return (
     <div className="max-w-7xl mx-auto gap-8 py-16 px-6 md:px-12">
-      <Link to=".." relative="path" className="text-2xl text-center">
+      <Link to={`..${search}`} relative="path" className="text-2xl text-center">
         &larr; <span className="text-lg hover:underline">Back to all vans</span>
       </Link>
       {van ? (

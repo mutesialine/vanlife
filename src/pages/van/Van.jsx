@@ -6,6 +6,7 @@ const Van = () => {
   const [vans, setVans] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
+  console.log(searchParams.toString(), "aaaa");
 
   useEffect(() => {
     fetch("api/vans")
@@ -58,7 +59,11 @@ const Van = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {displayedVans.map((element) => (
-          <VanCard {...element} key={element.id} />
+          <VanCard
+            {...element}
+            key={element.id}
+            state={{ search: `?${searchParams.toString()}` }}
+          />
         ))}
       </div>
     </div>

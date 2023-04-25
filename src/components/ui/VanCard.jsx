@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const VanCard = ({ imageUrl, name, price, type, id }) => {
+const VanCard = ({ imageUrl, name, price, type, id, state }) => {
   return (
-    <Link to={id} className="hover:opacity-80">
+    <Link to={id} state={state} className="hover:opacity-80">
       <div className="flex flex-col gap-y-2">
         <img src={imageUrl} alt="element" className="w-full md:w-[500px]" />
         <div className="flex flex-col md:flex-row gap-2 md:justify-between">
