@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getHostVans } from "../../Api";
 
 const HostVans = () => {
   const [vans, setVans] = useState([]);
+
+  async function loadHostVans() {
+    const data = await getHostVans();
+    setVans(data);
+  }
   useEffect(() => {
-    fetch("/api/host/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans))
-      .catch((error) => console.log(error));
+    loadHostVans();
   }, []);
   return (
     <div className="max-w-7xl mx-auto pt-16 pb-24 px-6 md:px-12 flex flex-col gap-4">
