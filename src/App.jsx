@@ -13,6 +13,7 @@ import {
   HostVanPricing,
   HostVanPhotos,
   Dashboard,
+  NotFound,
 } from "./pages";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
                 <Route path="photos" element={<HostVanPhotos />} />
               </Route>
             </Route>
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
