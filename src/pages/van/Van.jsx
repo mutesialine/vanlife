@@ -23,30 +23,30 @@ const Van = () => {
         Explore our Vans options
       </h2>
       <div className="flex gap-x-4 ">
-        <Link
-          to="."
-          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-gray-300"
-        >
-          Clear All
-        </Link>
-        <Link
-          to="?type=simple"
+        <button
+          onClick={() => setSearchParams({ type: "simple" })}
           className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-orange-500"
         >
           Simple
-        </Link>
-        <Link
-          to="?type=rugged"
+        </button>
+        <button
+          onClick={() => setSearchParams({ type: "rugged" })}
           className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-teal-800"
         >
           Rugged
-        </Link>
-        <Link
-          to="?type=luxury"
+        </button>
+        <button
+          onClick={() => setSearchParams({ type: "luxury" })}
           className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-gray-900"
         >
           luxury
-        </Link>
+        </button>
+        <button
+          onClick={() => setSearchParams({})}
+          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-gray-300"
+        >
+          Clear Filter
+        </button>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {displayedVans.map((element) => (
