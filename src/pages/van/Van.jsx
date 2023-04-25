@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import VanCard from "../../components/ui/VanCard";
 import { Link, useSearchParams } from "react-router-dom";
-
+import { getVans } from "../../Api";
 const Van = () => {
   const [vans, setVans] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-  console.log(searchParams.toString(), "aaaa");
+
+  async function loadVans() {
+    const data = await getVans();
+    setVans(data);
+  }
 
   useEffect(() => {
-    fetch("api/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans))
-      .catch((error) => console.log(error));
+    loadVans();
   }, []);
   const displayedVans = typeFilter
     ? vans.filter((van) => van.type === typeFilter)
