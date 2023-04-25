@@ -27,7 +27,7 @@ const Van = () => {
         <button
           onClick={() => setSearchParams({ type: "simple" })}
           className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-            typeFilter === "simple" ? "bg-orange-600 text-amber-100" : null
+            typeFilter === "simple" ? "bg-orange-600 text-amber-100" : ""
           }`}
         >
           Simple
@@ -35,7 +35,7 @@ const Van = () => {
         <button
           onClick={() => setSearchParams({ type: "rugged" })}
           className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-            typeFilter === "rugged" ? "bg-teal-700 text-amber-100" : null
+            typeFilter === "rugged" ? "bg-teal-700 text-amber-100" : ""
           }`}
         >
           Rugged
@@ -43,7 +43,7 @@ const Van = () => {
         <button
           onClick={() => setSearchParams({ type: "luxury" })}
           className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-            typeFilter === "luxury" ? "bg-gray-800 text-amber-100" : null
+            typeFilter === "luxury" ? "bg-gray-800 text-amber-100" : ""
           }`}
         >
           luxury
@@ -62,7 +62,7 @@ const Van = () => {
           <VanCard
             {...element}
             key={element.id}
-            state={{ search: `?${searchParams.toString()}` }}
+            state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
           />
         ))}
       </div>

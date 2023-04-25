@@ -13,10 +13,13 @@ const VanDetail = () => {
   }, [id]);
 
   const search = location.state?.search || "null";
+  const type = location.state?.type || "All";
+
   return (
-    <div className="max-w-7xl mx-auto gap-8 py-16 px-6 md:px-12">
+    <div className="max-w-7xl mx-auto space-y-4 py-16 px-6 md:px-12">
       <Link to={`..${search}`} relative="path" className="text-2xl text-center">
-        &larr; <span className="text-lg hover:underline">Back to all vans</span>
+        &larr;{" "}
+        <span className="text-lg hover:underline">{`back to ${type} vans`}</span>
       </Link>
       {van ? (
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-8">
