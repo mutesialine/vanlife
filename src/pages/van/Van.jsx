@@ -25,28 +25,36 @@ const Van = () => {
       <div className="flex gap-x-4 ">
         <button
           onClick={() => setSearchParams({ type: "simple" })}
-          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-orange-500"
+          className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
+            typeFilter === "simple" ? "bg-orange-600 text-amber-100" : null
+          }`}
         >
           Simple
         </button>
         <button
           onClick={() => setSearchParams({ type: "rugged" })}
-          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-teal-800"
+          className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
+            typeFilter === "rugged" ? "bg-teal-700 text-amber-100" : null
+          }`}
         >
           Rugged
         </button>
         <button
           onClick={() => setSearchParams({ type: "luxury" })}
-          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-gray-900"
+          className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
+            typeFilter === "luxury" ? "bg-gray-800 text-amber-100" : null
+          }`}
         >
           luxury
         </button>
-        <button
-          onClick={() => setSearchParams({})}
-          className="px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit bg-gray-300"
-        >
-          Clear Filter
-        </button>
+        {typeFilter ? (
+          <button
+            onClick={() => setSearchParams({})}
+            className="px-8 py-2 rounded-md text-base font-semibold text-amber-600 w-fit underline"
+          >
+            Clear Filter
+          </button>
+        ) : null}
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {displayedVans.map((element) => (

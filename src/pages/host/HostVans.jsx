@@ -14,12 +14,7 @@ const HostVans = () => {
       <h2 className="text-4xl font-bold pb-4">Your listed Vans</h2>
       {vans.length > 0 ? (
         vans.map((van) => (
-          <Link
-            to={van.id}
-            relative="path"
-            key={van.id}
-            className="hover:opacity-80"
-          >
+          <Link to={van.id} key={van.id} className="hover:opacity-80">
             <div
               className="flex items-center gap-x-4 w-full md:w-1/2 bg-white px-4 py-2"
               key={van.id}
