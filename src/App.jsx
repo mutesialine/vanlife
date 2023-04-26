@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import { HostLayout, Layout } from "./components/layouts";
+import { loader as vanLoader } from "./pages/van/Van";
 import {
   Home,
   About,
@@ -26,7 +27,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="vans" element={<Van />} />
+      <Route path="vans" element={<Van />} loader={vanLoader} />
       <Route path="vans/:id" element={<VanDetail />} />
       <Route path="host" element={<HostLayout />}>
         <Route index element={<Dashboard />} />
