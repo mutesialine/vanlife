@@ -5,7 +5,7 @@ export async function getVans() {
 }
 
 export async function getHostVans() {
-  const res = await fetch("api/host/vans");
+  const res = await fetch("/api/host/vans");
   const data = await res.json();
   return data.vans;
 }

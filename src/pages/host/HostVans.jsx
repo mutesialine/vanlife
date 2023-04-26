@@ -4,7 +4,6 @@ import { getHostVans } from "../../Api";
 
 const HostVans = () => {
   const [vans, setVans] = useState([]);
-
   async function loadHostVans() {
     const data = await getHostVans();
     setVans(data);
@@ -35,7 +34,7 @@ const HostVans = () => {
           </Link>
         ))
       ) : (
-        <p>Loading</p>
+        <p className="text-4xl">Loading...</p>
       )}
     </div>
   );

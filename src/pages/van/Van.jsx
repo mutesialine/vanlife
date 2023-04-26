@@ -33,7 +33,7 @@ const Van = () => {
             <button
               onClick={() => setSearchParams({ type: "simple" })}
               className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-                typeFilter === "simple" ? "bg-orange-600 text-amber-100" : ""
+                typeFilter === "simple" ? "bg-orange-600 text-white" : ""
               }`}
             >
               Simple
@@ -41,7 +41,7 @@ const Van = () => {
             <button
               onClick={() => setSearchParams({ type: "rugged" })}
               className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-                typeFilter === "rugged" ? "bg-teal-700 text-amber-100" : ""
+                typeFilter === "rugged" ? "bg-teal-700 text-white" : ""
               }`}
             >
               Rugged
@@ -49,7 +49,7 @@ const Van = () => {
             <button
               onClick={() => setSearchParams({ type: "luxury" })}
               className={`px-8 py-2 rounded-md text-base font-semibold text-gray-900 w-fit bg-amber-100 ${
-                typeFilter === "luxury" ? "bg-gray-800 text-amber-100" : ""
+                typeFilter === "luxury" ? "bg-gray-800 text-white" : ""
               }`}
             >
               luxury
