@@ -15,7 +15,7 @@ const HostVans = () => {
         vans.map((van) => (
           <Link to={van.id} key={van.id} className="hover:opacity-80">
             <div
-              className="flex items-center gap-x-4 w-full md:w-1/2 bg-white px-4 py-2"
+              className="flex items-center gap-x-4 w-full md:w-1/2 px-4 py-2"
               key={van.id}
             >
               <img

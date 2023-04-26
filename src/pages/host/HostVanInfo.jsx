@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 const HostVanInfo = () => {
   const { currentVan } = useOutletContext();
   return (
-    <div className="text-xl font-bold">
+    <div className="text-xl font-bold space-y-4">
       <h4>
         Name: <span className="font-normal">{currentVan.name}</span>
       </h4>
