@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getHostVans } from "../../Api";
 
+export const loader = () => {
+  return getHostVans();
+};
+
 const HostVans = () => {
-  const [vans, setVans] = useState([]);
-  async function loadHostVans() {
-    const data = await getHostVans();
-    setVans(data);
-  }
-  useEffect(() => {
-    loadHostVans();
-  }, []);
+  const vans = useLoaderData();
+
   return (
     <div className="max-w-7xl mx-auto pt-16 pb-24 px-6 md:px-12 flex flex-col gap-4">
       <h2 className="text-4xl font-bold pb-4">Your listed Vans</h2>
