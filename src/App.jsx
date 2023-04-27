@@ -26,6 +26,7 @@ import {
   NotFound,
   Login,
 } from "./pages";
+import { requireAuth } from "./Utils";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -9,7 +9,7 @@ export const loader = ({ params }) => {
 const HostVanDetail = () => {
   const currentVan = useLoaderData();
   return (
-    <div className="max-w-7xl mx-auto pt-12 pb-24 px-6 md:px-24 space-y-4 mt-6">
+    <div className="max-w-7xl mx-auto pt-12 pb-24 px-6 md:px-24 space-y-4 mt-6 bg-white">
       <Link to="/host/vans" className="text-2xl text-center">
         &larr; <span className="text-lg hover:underline">Back to all vans</span>
       </Link>

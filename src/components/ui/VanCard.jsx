@@ -13,9 +13,9 @@ const VanCard = ({ imageUrl, name, price, type, id, state }) => {
           </p>
         </div>
         <button
-          className={`px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit capitalize ${
+          className={`px-8 py-2 rounded-md text-base font-semibold text-amber-50 w-fit hover:bg-red-500 capitalize ${
             type === "simple"
-              ? "bg-orange-500"
+              ? "hover:bg-orange-800"
               : type === "rugged"
               ? "bg-teal-800"
               : type === "luxury"
