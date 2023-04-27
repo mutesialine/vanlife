@@ -8,6 +8,7 @@ import { HostLayout, Layout } from "./components/layouts";
 import { loader as vansLoader } from "./pages/van/Van";
 import { loader as vanDetailLoader } from "./pages/van/VanDetail";
 import { loader as hostVansLoader } from "./pages/host/HostVans";
+import { loader as hostVanDetailLoader } from "./pages/host/HostVanDetail";
 import Error from "./components/Error";
 import {
   Home,
@@ -44,7 +45,11 @@ const router = createBrowserRouter(
         <Route path="income" element={<Income />} />
         <Route path="reviews" element={<Reviews />} />
         <Route path="vans" element={<HostVans />} loader={hostVansLoader} />
-        <Route path="vans/:id" element={<HostVanDetail />}>
+        <Route
+          path="vans/:id"
+          element={<HostVanDetail />}
+          loader={hostVanDetailLoader}
+        >
           <Route index element={<HostVanInfo />} />
           <Route path="pricing" element={<HostVanPricing />} />
           <Route path="photos" element={<HostVanPhotos />} />
