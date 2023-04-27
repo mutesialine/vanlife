@@ -33,7 +33,7 @@ const NavBar = () => {
         >
           Vans
         </NavLink>
-        <Link to="signin">
+        <Link to="login">
           <CgProfile size={24} />
         </Link>
       </div>

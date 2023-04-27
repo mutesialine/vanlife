@@ -33,7 +33,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="signin" element={<Login />} />
+      <Route path="login" element={<Login />} />
       <Route
         path="vans"
         element={<Van />}
@@ -42,7 +42,11 @@ const router = createBrowserRouter(
       />
       <Route path="vans/:id" element={<VanDetail />} loader={vanDetailLoader} />
       <Route path="host" element={<HostLayout />}>
-        <Route index element={<Dashboard />} />
+        <Route
+          index
+          element={<Dashboard />}
+          loader={async () => await requireAuth()}
+        />
         <Route path="income" element={<Income />} />
         <Route path="reviews" element={<Reviews />} />
         <Route path="vans" element={<HostVans />} loader={hostVansLoader} />
