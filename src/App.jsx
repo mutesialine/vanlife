@@ -22,6 +22,7 @@ import {
   HostVanPhotos,
   Dashboard,
   NotFound,
+  Login,
 } from "./pages";
 
 const router = createBrowserRouter(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="signin" element={<Login />} />
       <Route
         path="vans"
         element={<Van />}

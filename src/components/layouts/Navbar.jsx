@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 const NavBar = () => {
   return (
     <div className="py-8 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
@@ -32,6 +33,9 @@ const NavBar = () => {
         >
           Vans
         </NavLink>
+        <Link to="signin">
+          <CgProfile size={24} />
+        </Link>
       </div>
     </div>
   );
