@@ -1,9 +1,9 @@
 import { redirect } from "react-router-dom";
 
 export async function requireAuth() {
-  const isLoggedIn = false;
-
+  const isLoggedIn = false; // replace with your authentication logic
   if (!isLoggedIn) {
-    throw redirect("/login");
+    return redirect("/login"); // redirect to login page
   }
+  return null;
 }
