@@ -1,9 +1,12 @@
 import { Form } from "react-router-dom";
+import { loginUser } from "../../Api";
+
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("pawword");
-  console.log(email, password);
+  const data = await loginUser({ password, email });
+  console.log(data);
   return null;
 };
 
