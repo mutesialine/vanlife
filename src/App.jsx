@@ -34,12 +34,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route
-        path="login"
-        element={<Login />}
-        loader={loginLoader}
-        action={loginAction()}
-      />
+      <Route path="login" element={<Login />} action={loginAction()} />
       <Route
         path="vans"
         element={<Van />}

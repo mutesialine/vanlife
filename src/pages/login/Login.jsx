@@ -1,6 +1,9 @@
-import { Form, useNavigate } from "react-router-dom";
-export const action = async () => {
-  console.log("function return here");
+import { Form } from "react-router-dom";
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const email = formData.get("email");
+  const password = formData.get("pawword");
+  console.log(email, password);
   return null;
 };
 
