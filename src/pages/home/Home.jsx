@@ -14,7 +14,7 @@ const Home = () => {
           </p>
           <Link
             to="/vans"
-            className="p-4 text-center bg-orange-500 hover:opacity-80 text-lg mt-10 w-1/2"
+            className="p-4 text-center bg-orange-500 hover:opacity-80 text-lg mt-10 w-1/2 rounded"
           >
             Find your van
           </Link>

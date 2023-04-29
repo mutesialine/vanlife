@@ -53,23 +53,39 @@ const router = createBrowserRouter(
         <Route
           index
           element={<Dashboard />}
-          loader={async () => await requireAuth()}
+          loader={async ({ request }) => await requireAuth(request)}
         />
         <Route
           path="income"
           element={<Income />}
-          loader={async () => await requireAuth()}
+          loader={async ({ request }) => await requireAuth(request)}
         />
-        <Route path="reviews" element={<Reviews />} />
+        <Route
+          path="reviews"
+          element={<Reviews />}
+          loader={async ({ request }) => await requireAuth(request)}
+        />
         <Route path="vans" element={<HostVans />} loader={hostVansLoader} />
         <Route
           path="vans/:id"
           element={<HostVanDetail />}
           loader={hostVanDetailLoader}
         >
-          <Route index element={<HostVanInfo />} />
-          <Route path="pricing" element={<HostVanPricing />} />
-          <Route path="photos" element={<HostVanPhotos />} />
+          <Route
+            index
+            element={<HostVanInfo />}
+            loader={async ({ request }) => await requireAuth(request)}
+          />
+          <Route
+            path="pricing"
+            element={<HostVanPricing />}
+            loader={async ({ request }) => await requireAuth(request)}
+          />
+          <Route
+            path="photos"
+            element={<HostVanPhotos />}
+            loader={async ({ request }) => await requireAuth(request)}
+          />
         </Route>
       </Route>
       <Route path="*" element={<NotFound />} />
