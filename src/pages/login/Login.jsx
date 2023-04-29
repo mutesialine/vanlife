@@ -1,28 +1,29 @@
 import {
+  useLoaderData,
+  useNavigation,
   Form,
   redirect,
   useActionData,
-  useLoaderData,
-  useNavigation,
 } from "react-router-dom";
 import { loginUser } from "../../Api";
 
-export const loader = async () => {
-  return new URL(request.url).searchParams.get("message");
+export const loader = ({ request }) => {
+  const url = new URL(request.url).searchParams.get("message");
+  return url;
 };
 
-// export const action = async ({ request }) => {
-//   const formData = await request.formData();
-//   const email = formData.get("email");
-//   const password = formData.get("pawword");
-//   try {
-//     const data = await loginUser(password, email);
-//     localStorage.setItem("loggedin", true);
-//     return redirect("host");
-//   } catch (error) {
-//     return error.message
-//   }
-// }
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const email = formData.get("email");
+  const password = formData.get("pawword");
+  try {
+    const data = await loginUser(password, email);
+    localStorage.setItem("loggedin", true);
+    return redirect("host");
+  } catch (error) {
+    return error.message;
+  }
+};
 
 const Login = () => {
   const message = useLoaderData();
@@ -33,9 +34,13 @@ const Login = () => {
       <h1 className="text-4xl font-bold text-center">
         Sign in to your account
       </h1>
-      {message && <h2>{message}</h2>}
-      {errorMessage && <h2>{errorMessage}</h2>}
-      <Form method="post" className="flex flex-col gap-y-6 ">
+      {message && (
+        <h2 className="text-red-500 text-lg text-center">{message}</h2>
+      )}
+      {errorMessage && (
+        <h2 className="text-red-500 text-lg text-center">{errorMessage}</h2>
+      )}
+      <Form method="post" replace className="flex flex-col gap-y-6 ">
         <input
           name="email"
           type="email"

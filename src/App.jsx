@@ -29,6 +29,7 @@ import {
   Login,
 } from "./pages";
 import { requireAuth } from "./Utils";
+import "./data/Server";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,8 +39,8 @@ const router = createBrowserRouter(
       <Route
         path="login"
         element={<Login />}
-        loader={loginLoader()}
-        action={loginAction()}
+        loader={loginLoader}
+        action={loginAction}
       />
       <Route
         path="vans"
