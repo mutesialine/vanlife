@@ -34,8 +34,8 @@ const Login = () => {
   const errorMessage = useActionData();
   const navigation = useNavigation();
   return (
-    <div className="max-w-7xl mx-auto py-20 space-y-6 px-6 md:px-12 w-1/2 text-center">
-      <h1 className="text-4xl font-bold text-center">
+    <div className="max-w-7xl mx-auto py-20 space-y-6 px-6 md:px-12 md:w-1/2 text-center">
+      <h1 className="text-xl md:text-4xl font-bold md:text-center">
         Sign in to your account
       </h1>
       {message && (
@@ -68,7 +68,7 @@ const Login = () => {
           {navigation.state === "submitting" ? "logging in .." : "login"}
         </button>
       </Form>
-      <h2 className="text-lg pt-2">
+      <h2 className="text-lg pt-2 flex flex-col md:flex-row">
         Don't have an account ?
         <Link className="text-orange-500 underline">Create one now</Link>
       </h2>
