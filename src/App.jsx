@@ -6,8 +6,10 @@ import {
 } from "react-router-dom";
 import { HostLayout, Layout } from "./components/layouts";
 import { loader as vansLoader } from "./pages/van/Van";
-import { action as loginAction } from "./pages/login/Login";
-import { loader as loginLoader } from "./pages/login/Login";
+import {
+  loader as loginLoader,
+  action as loginAction,
+} from "./pages/login/Login";
 import { loader as vanDetailLoader } from "./pages/van/VanDetail";
 import { loader as hostVansLoader } from "./pages/host/HostVans";
 import { loader as hostVanDetailLoader } from "./pages/host/HostVanDetail";
@@ -29,7 +31,6 @@ import {
   Login,
 } from "./pages";
 import { requireAuth } from "./Utils";
-import "./data/Server";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
