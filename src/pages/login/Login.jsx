@@ -16,12 +16,11 @@ export const loader = ({ request }) => {
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const email = formData.get("email");
-  const password = formData.get("pawword");
+  const password = formData.get("password");
   const pathname =
     new URL(request.url).searchParams.get("redirectTo") || "/host";
   try {
     const data = await loginUser({ password, email });
-    console.log(data);
     localStorage.setItem("loggedin", true);
     return redirect(pathname);
   } catch (err) {
@@ -39,14 +38,10 @@ const Login = () => {
         Sign in to your account
       </h1>
       {message && (
-        <h2 className="text-red-500 text-base font-bold text-center">
-          {message}
-        </h2>
+        <h2 className="text-red-500 text-base font-bold ">{message}</h2>
       )}
       {errorMessage && (
-        <h2 className="text-red-500 text-base font-bold text-center">
-          {errorMessage}
-        </h2>
+        <h2 className="text-red-500 text-base font-bold">{errorMessage}</h2>
       )}
       <Form method="post" replace className="flex flex-col gap-y-2">
         <input
@@ -68,7 +63,7 @@ const Login = () => {
           {navigation.state === "submitting" ? "logging in .." : "login"}
         </button>
       </Form>
-      <h2 className="text-lg pt-2 flex flex-col md:flex-row">
+      <h2 className="text-lg pt-2 flex flex-col md:flex-row justify-center">
         Don't have an account ?
         <Link className="text-orange-500 underline">Create one now</Link>
       </h2>
