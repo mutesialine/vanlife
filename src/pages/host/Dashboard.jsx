@@ -16,14 +16,14 @@ const Dashboard = () => {
   return (
     <div className="max-w-7xl mx-auto text-4xl py-16 px-6 md:px-12">
       <section className="p-6 bg-orange-300 flex justify-between">
-        <div className="">
+        <div className="space-y-8">
           <h1 className="text-4xl font-bold">Welcome!</h1>
           <p className="text-lg flex ">
             Income last <span>30 days</span>
           </p>
           <h2 className="text-3xl font-bold">$2,260</h2>
         </div>
-        <Link to="income" className="text-2xl font-bold">
+        <Link to="income" className="text-xl font-bold hover:underline">
           Details
         </Link>
       </section>
@@ -35,7 +35,7 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <Link to="reviews" className="text-2xl font-bold">
+        <Link to="reviews" className="text-xl font-bold hover:underline">
           Details
         </Link>
       </section>
