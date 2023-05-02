@@ -3,8 +3,8 @@ import { HostVanLayout } from "../../components/layouts";
 import { getHostVans } from "../../Api";
 import { requireAuth } from "../../Utils";
 
-export const loader = async ({ params }) => {
-  await requireAuth();
+export const loader = async ({ params, request }) => {
+  await requireAuth(request);
   return getHostVans(params.id);
 };
 
