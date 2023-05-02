@@ -1,9 +1,9 @@
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useLoaderData, useSearchParams, defer } from "react-router-dom";
 import VanCard from "../../components/ui/VanCard";
 import { getVans } from "../../Api";
 
 export const loader = () => {
-  return getVans();
+  return defer({ vans: getVans() });
 };
 
 const Van = () => {
