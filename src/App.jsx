@@ -11,8 +11,8 @@ import {
   action as loginAction,
 } from "./pages/login/Login";
 import { loader as vanDetailLoader } from "./pages/van/VanDetail";
-import { loader as dashboardLoader } from "./pages/host/Dashboard";
 import { loader as hostVansLoader } from "./pages/host/HostVans";
+import { loader as dashboardLoader } from "./pages/host/Dashboard";
 import { loader as hostVanDetailLoader } from "./pages/host/HostVanDetail";
 import Error from "./components/Error";
 import {
