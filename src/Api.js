@@ -8,8 +8,10 @@ export async function getVans(id) {
       status: res.status,
     };
   }
+  // console.log(res.json(), "----");
   const data = await res.json();
   return data.vans;
+  // return [];
 }
 
 export async function getHostVans(id) {

@@ -75,9 +75,9 @@ createServer({
     });
     server.create("user", {
       id: "123",
-      email: "aline@gmail.com",
-      password: "mutesi123",
-      name: "Aline",
+      email: "b@b.com",
+      password: "p123",
+      name: "Bob",
     });
   },
 
@@ -117,7 +117,7 @@ createServer({
         return new Response(
           401,
           {},
-          { message: "No user with those credentsssials found!" }
+          { message: "No user with those credentials found!" }
         );
       }
 
