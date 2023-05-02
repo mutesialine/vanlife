@@ -5,7 +5,7 @@ const Income = () => {
     { amount: 980, date: "Dec 3, '22", id: "3" },
   ];
   return (
-    <div className="max-w-7xl mx-auto text-4xl pt-16 pb-32 px-6 md:px-12 flex justify-between items-center">
+    <div className="max-w-7xl mx-auto text-4xl pt-16 pb-32 px-6 md:px-12 flex flex-col md:flex-row  gap-y-12 justify-between items-center">
       <div className="space-y-6">
         <h1 className="text-3xl font-bold">Income</h1>
         <p className="text-lg">
@@ -16,7 +16,9 @@ const Income = () => {
       </div>
       <div className=" space-y-12">
         <div className="flex gap-x-6 items-center">
-          <h3 className="font-bold text-4xl">Your transactions (3)</h3>
+          <h3 className="font-bold text-2xl md:text-4xl">
+            Your transactions (3)
+          </h3>
           <p className="text-xl">
             Last <span>30 days</span>
           </p>
