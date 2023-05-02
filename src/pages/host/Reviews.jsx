@@ -17,7 +17,7 @@ const Reviews = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto text-4xl py-16 px-6 md:px-12  flex justify-between gap-x-12 items-center">
+    <div className="max-w-7xl mx-auto text-4xl py-16 px-6 md:px-12  flex  flex-col md:flex-row gap-y-6 justify-between gap-x-12 items-center">
       <div className="space-y-6">
         <div className="flex items-center">
           <h2>Your reviews</h2>
@@ -27,7 +27,7 @@ const Reviews = () => {
         </div>
         <img className="w-full" src="/images/Group2.webp" alt="Review graph" />
       </div>
-      <div className="text-xl w-1/2">
+      <div className="text-xl md:w-1/2">
         <h3 className="font-bold">Reviews (2)</h3>
         {reviewsData.map((review) => (
           <div key={review.id}>
