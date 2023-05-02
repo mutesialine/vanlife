@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { getVans } from "../../Api";
 import VanElement from "./VanElement";
@@ -14,9 +15,11 @@ const Van = () => {
       <h2 className="text-3xl md:text-5xl font-bold">
         Explore our Vans options
       </h2>
-      <Await resolve={dataPromise.vans}>
-        {(vans) => <VanElement vans={vans} />}
-      </Await>
+      <Suspense fallback={<h1 className="text-2xl">Loading vans...</h1>}>
+        <Await resolve={dataPromise.vans}>
+          {(vans) => <VanElement vans={vans} />}
+        </Await>
+      </Suspense>
     </div>
   );
 };
