@@ -19,7 +19,7 @@ const VanDetail = () => {
   const type = location.state?.type || "All";
 
   return (
-    <div className="max-w-7xl mx-auto space-y-4 py-16 px-6 md:px-12">
+    <div className="max-w-7xl mx-auto space-y-4 pt-16 pb-32 px-6 md:px-12">
       <Link to={`..${search}`} relative="path" className="text-2xl text-center">
         &larr;{" "}
         <span className="text-lg hover:underline">{`back to ${type} vans`}</span>

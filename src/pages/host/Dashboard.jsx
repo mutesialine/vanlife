@@ -14,7 +14,7 @@ const Dashboard = () => {
   console.log(loadedData, "-----");
 
   return (
-    <div className="max-w-7xl mx-auto text-4xl py-16 px-6 md:px-12">
+    <div className="max-w-7xl mx-auto text-4xl pt-16 pb-32 px-6 md:px-12">
       <section className="p-6 bg-orange-300 flex justify-between">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold">Welcome!</h1>

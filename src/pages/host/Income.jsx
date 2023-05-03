@@ -1,8 +1,8 @@
 const Income = () => {
   const transactionsData = [
-    { amount: 720, date: "Jan 3, '23", id: "1" },
-    { amount: 560, date: "Dec 12, '22", id: "2" },
-    { amount: 980, date: "Dec 3, '22", id: "3" },
+    { amount: 720, date: "Jan 3, 23", id: "1" },
+    { amount: 560, date: "Dec 12, 22", id: "2" },
+    { amount: 980, date: "Dec 3, 22", id: "3" },
   ];
   return (
     <div className="max-w-7xl mx-auto text-4xl pt-16 pb-32 px-6 md:px-12 flex flex-col md:flex-row  gap-y-12 justify-between items-center">
@@ -27,7 +27,7 @@ const Income = () => {
           {transactionsData.map((item) => (
             <div
               key={item.id}
-              className="flex justify-between p-4 bg-white text-2xl "
+              className="flex justify-between px-3 py-6  bg-white text-xl "
             >
               <h3>${item.amount}</h3>
               <p>{item.date}</p>

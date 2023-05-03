@@ -11,7 +11,7 @@ export const loader = async ({ params, request }) => {
 const HostVanDetail = () => {
   const loadedVan = useLoaderData();
   return (
-    <div className="max-w-7xl mx-auto pt-12 pb-24 px-6 md:px-24 space-y-4 mt-6 bg-white">
+    <div className="max-w-7xl mx-auto pt-12 pb-28 px-6 md:px-24 space-y-4 mt-6 bg-orange-50">
       <Link to="/host/vans" className="text-2xl text-center">
         &larr; <span className="text-lg hover:underline">Back to all vans</span>
       </Link>

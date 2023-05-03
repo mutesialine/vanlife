@@ -17,7 +17,7 @@ const Reviews = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto text-4xl py-16 px-6 md:px-12  flex  flex-col md:flex-row gap-y-6 justify-between gap-x-12 items-center">
+    <div className="max-w-7xl mx-auto text-4xl pt-16 py-32 px-6 md:px-12 flex flex-col md:flex-row gap-y-6 justify-between gap-x-12 items-center">
       <div className="space-y-6">
         <div className="flex items-center">
           <h2>Your reviews</h2>
