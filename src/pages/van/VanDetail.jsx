@@ -6,10 +6,10 @@ import {
   defer,
   Await,
 } from "react-router-dom";
-import { getVans } from "../../Api";
+import { getVan } from "../../Api";
 
 export const loader = ({ params }) => {
-  return defer({ van: getVans(params.id) });
+  return defer({ van: getVan(params.id) });
 };
 
 const VanDetail = () => {
