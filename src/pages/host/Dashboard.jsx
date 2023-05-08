@@ -11,8 +11,6 @@ export const loader = async ({ request }) => {
 
 const Dashboard = () => {
   const loadedData = useLoaderData();
-  console.log(loadedData, "-----");
-
   return (
     <div className="max-w-7xl mx-auto text-4xl pt-16 pb-32 px-6 md:px-12">
       <section className="p-6 bg-orange-300 flex justify-between">
