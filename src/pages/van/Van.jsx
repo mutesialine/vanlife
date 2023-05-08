@@ -1,6 +1,6 @@
 import { useLoaderData, useSearchParams } from "react-router-dom";
 import VanCard from "../../components/ui/VanCard";
-import { getVans } from "../../Api";
+import { getVans } from "../../api";
 
 export const loader = () => {
   return getVans();
