@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import VanCard from "../../components/ui/VanCard";
+import VanCard from "../ui/VanCard";
 
 const VanElement = ({ vans }) => {
   const [searchParams, setSearchParams] = useSearchParams();

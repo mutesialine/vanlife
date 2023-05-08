@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { getHostVans } from "../../api";
 import { requireAuth } from "../../Utils";
-import HostVanElement from "./HostVanElement";
+import { HostVanElement } from "../../components/sections";
 
 export const loader = async ({ request }) => {
   await requireAuth(request);
