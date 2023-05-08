@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { useLoaderData, Await, defer } from "react-router-dom";
-import { getVans } from "../../Api";
+import { getVans } from "../../api";
 import VanElement from "./VanElement";
 
 export const loader = () => {

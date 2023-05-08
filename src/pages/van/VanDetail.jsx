@@ -6,7 +6,7 @@ import {
   defer,
   Await,
 } from "react-router-dom";
-import { getVan } from "../../Api";
+import { getVan } from "../../api";
 
 export const loader = ({ params }) => {
   return defer({ van: getVan(params.id) });

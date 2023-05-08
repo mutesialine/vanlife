@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { useLoaderData, defer, Await } from "react-router-dom";
-import { getHostVans } from "../../Api";
+import { getHostVans } from "../../api";
 import { requireAuth } from "../../Utils";
 import HostVanElement from "./HostVanElement";
 

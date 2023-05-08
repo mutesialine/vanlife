@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Await, Link, Outlet, defer, useLoaderData } from "react-router-dom";
 import { HostVanLayout } from "../../components/layouts";
-import { getVan } from "../../Api";
+import { getVan } from "../../api";
 import { requireAuth } from "../../Utils";
 
 export const loader = async ({ params, request }) => {
