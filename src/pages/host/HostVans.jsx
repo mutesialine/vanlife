@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { getHostVans } from "../../Api";
+import { getHostVans } from "../../api";
 
 export const loader = () => {
   return getHostVans();
