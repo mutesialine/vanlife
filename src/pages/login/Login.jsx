@@ -6,7 +6,7 @@ import {
   useActionData,
   Link,
 } from "react-router-dom";
-import { loginUser } from "../../Api";
+import { loginUser } from "../../api";
 
 export const loader = ({ request }) => {
   const url = new URL(request.url).searchParams.get("message");
